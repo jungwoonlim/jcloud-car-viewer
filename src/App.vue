@@ -1,31 +1,29 @@
 <template>
-  <div class="app">
-    <div class="title">
-      jCloud Car Viewer
-    </div>
-    <div class="sub-description">
-      간단한 3D 자동차 모델 뷰어
-    </div>
-  </div>
+<div class="main-box">
+  <MainContainer />
+  <MainRenderer />
+</div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import MainContainer from "./components/MainContainer.vue";
+import MainRenderer from "./components/MainRenderer.vue";
 
 export default defineComponent({
   name: "App",
-  components: {},
+  components: {
+    MainContainer,
+    MainRenderer,
+  },
 });
 </script>
 
 <style lang="scss" scoped>
-.app {
-  .title {
-    color: blue;
-  }
-
-  .sub-description {
-    color: skyblue;
-  }
+.main-box {
+  width: 100%;
+  height: 100vh;
+  color: #f2f2f2;
+  background-color: #2f2f2f;
 }
 </style>
