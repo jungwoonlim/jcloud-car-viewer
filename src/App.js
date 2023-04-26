@@ -6,10 +6,10 @@ import { MainContainer } from './components/MainContainer';
 function App() {
   return (
     <Suspense fallback={null}>
-      <MainContainer />
       <Canvas shadows>
         <Renderer />
       </Canvas>
+      <MainContainer />
     </Suspense>
   );
 }
