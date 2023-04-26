@@ -1,12 +1,31 @@
 import { MeshReflectorMaterial } from "@react-three/drei";
-import { useLoader } from "@react-three/fiber";
-import { TextureLoader } from "three";
+import { useFrame, useLoader } from "@react-three/fiber";
+import { useEffect } from "react";
+import { LinearEncoding, RepeatWrapping, TextureLoader } from "three";
 
 export const Ground = () => {
-  const [roughness, normal] = useLoader(TextureLoader, [
-    process.env.PUBLIC_URL + 'textures/terrain-roughness.jpg',
+  const [normal, roughness] = useLoader(TextureLoader, [
     process.env.PUBLIC_URL + 'textures/terrain-normal.jpg',
+    process.env.PUBLIC_URL + 'textures/terrain-roughness.jpg',
   ]);
+
+  useEffect(() => {
+    [normal, roughness].forEach((texture) => {
+      texture.wrapS = RepeatWrapping;
+      texture.wrapt = RepeatWrapping;
+      texture.repeat.set(5, 5);
+    });
+
+    normal.encoding = LinearEncoding;
+  }, [normal, roughness]);
+
+  useFrame((state) => {
+    const time = state.clock.getElapsedTime();
+    const goTime = - time * 0.128;
+
+    roughness.offset.set(0, goTime % 1);
+    normal.offset.set(0, goTime % 1);
+  });
 
   return (
     <mesh rotation-x={-Math.PI * 0.5} castShadow receiveShadow>

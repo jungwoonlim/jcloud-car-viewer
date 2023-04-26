@@ -5,7 +5,7 @@ import { MainContainer } from './components/MainContainer';
 
 function App() {
   return (
-    <Suspense fallback={null}>
+    <Suspense fallback={<div>Loading</div>}>
       <Canvas shadows>
         <Renderer />
       </Canvas>
