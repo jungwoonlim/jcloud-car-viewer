@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { Renderer } from './components/Renderer';
-import { MainContainer } from './components/MainContainer';
+import { Renderer } from './components/renderer/Renderer';
+import { MainContainer } from './components/container/MainContainer';
 
 function App() {
   return (
