@@ -1,5 +1,6 @@
 import { useFrame, useLoader } from "@react-three/fiber";
 import { useEffect } from "react";
+import { Mesh } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 export const Car = () => {
@@ -11,6 +12,13 @@ export const Car = () => {
   useEffect(() => {
     model.scene.scale.set(1.25, 1.25, 1.25);
     model.scene.position.set(0.75, 0.535, 0);
+    model.scene.traverse((object) => {
+      if (object instanceof Mesh) {
+        object.castShadow = true;
+        object.receiveShadow = true;
+        object.material.envMapIntensity = 20;
+      }
+    });
   }, [model]);
 
   useFrame((state) => {
