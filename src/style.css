@@ -6,18 +6,13 @@ html, body, #root, canvas {
   background-color: black;
 }
 
-.main-wrapper {
+.main-container {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   color: aliceblue;
-}
-
-.main-container {
-  width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   background-color: rgba(30, 41, 59, 0.5);
@@ -84,8 +79,4 @@ html, body, #root, canvas {
 
 .color2 {
 background-color: #598EF3;
-}
-
-.hidden {
-  display: none;
 }
