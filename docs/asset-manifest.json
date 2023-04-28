@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/jcloud-car-viewer/static/css/main.ce4eccf3.css",
-    "main.js": "/jcloud-car-viewer/static/js/main.6018864b.js",
+    "main.js": "/jcloud-car-viewer/static/js/main.2ab87557.js",
     "index.html": "/jcloud-car-viewer/index.html",
     "main.ce4eccf3.css.map": "/jcloud-car-viewer/static/css/main.ce4eccf3.css.map",
-    "main.6018864b.js.map": "/jcloud-car-viewer/static/js/main.6018864b.js.map"
+    "main.2ab87557.js.map": "/jcloud-car-viewer/static/js/main.2ab87557.js.map"
   },
   "entrypoints": [
     "static/css/main.ce4eccf3.css",
-    "static/js/main.6018864b.js"
+    "static/js/main.2ab87557.js"
   ]
 }

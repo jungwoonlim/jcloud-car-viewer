@@ -6,7 +6,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 export const Car = () => {
   const model = useLoader(
     GLTFLoader,
-    process.env.PUBLIC_URL + 'model/scene.gltf',
+    process.env.PUBLIC_URL + '/model/scene.gltf',
   );
   
   useEffect(() => {
