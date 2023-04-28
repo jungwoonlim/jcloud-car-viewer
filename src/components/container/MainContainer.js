@@ -32,9 +32,9 @@ export const MainContainer = () => {
           <p>
             A convertible version of the car called the MP4-12C Spider, renamed the 12C Spider in 2012, was also available. In February 2014, McLaren announced the related 650S, with revised bodywork, upgraded engine and other technical improvements. In April 2014, McLaren announced the end of production of the 12C.
           </p>
-          <div className="button color1" onClick={() => setShowModel(true)}>
-            Show Model
-          </div>
+        </div>
+        <div className="button color1" onClick={() => setShowModel(true)}>
+          Show Model
         </div>
       </div>
     </div>
