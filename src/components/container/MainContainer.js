@@ -9,7 +9,7 @@ export const MainContainer = () => {
       <div className={classNames(
         'main-container',
         {
-          'hidden': !showModel,
+          'hidden': showModel,
         },
       )}>
         <div className="card">
@@ -36,7 +36,7 @@ export const MainContainer = () => {
         classNames(
           'back-container',
           {
-            'hidden': showModel,
+            'hidden': !showModel,
           },
         )
       }>
