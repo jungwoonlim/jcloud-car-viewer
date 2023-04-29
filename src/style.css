@@ -144,11 +144,11 @@ html, body, #root, canvas {
   }
 
   .card .title {
-    margin-top: 2.5rem;
+    margin-top: 5rem;
   }
 
-  .card .description {
-    margin-bottom: 2.5rem;
+  .card .button {
+    margin-bottom: 5rem;
   }
 
   .back-container {
