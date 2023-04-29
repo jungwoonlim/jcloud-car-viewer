@@ -4,7 +4,7 @@ import { Renderer } from './components/renderer/Renderer';
 import { MainContainer } from './components/container/MainContainer';
 import { Loading } from './components/container/Loading';
 
-function App() {
+export const App = () => {
   return (
     <Suspense fallback={<Loading />}>
       <Canvas shadows>
@@ -13,6 +13,4 @@ function App() {
       <MainContainer />
     </Suspense>
   );
-}
-
-export default App;
+};
