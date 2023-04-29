@@ -1,20 +1,17 @@
-import Lottie from 'lottie-react';
+import { useLottie } from 'lottie-react';
 import animationData from '../../assets/loading.json'
 
 export const Loading = () => {
   const defaultOptions = {
     loop: true,
-    autoplay: true,
     animationData,
   };
 
+  const { View } = useLottie(defaultOptions);
+
   return (
     <div className='loading'>
-      <Lottie
-        options={defaultOptions}
-        width={100}
-        height={100}
-      />
+      { View }
     </div>
   );
 };
