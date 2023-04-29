@@ -26,6 +26,16 @@ html, body, #root, canvas {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-size: large;
+  text-align: center;
+}
+
+.loading p {
+  color: rgba(78, 71, 219, 1);
+}
+
+.loading span {
+  color: rgba(71, 136, 220, 1);
 }
 
 .card {
