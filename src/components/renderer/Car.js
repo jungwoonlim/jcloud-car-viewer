@@ -15,7 +15,6 @@ export const Car = () => {
     model.scene.traverse((object) => {
       if (object instanceof Mesh) {
         object.castShadow = true;
-        object.receiveShadow = true;
         object.material.envMapIntensity = 20;
       }
     });
