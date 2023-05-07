@@ -1,9 +1,10 @@
+import { useGLTF } from "@react-three/drei";
 import { useFrame, useLoader } from "@react-three/fiber";
 import { useEffect } from "react";
 import { Mesh } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
-export const Car = () => {
+const Car = () => {
   const model = useLoader(
     GLTFLoader,
     import.meta.env.BASE_URL + '/model/scene.gltf',
@@ -32,3 +33,7 @@ export const Car = () => {
 
   return <primitive object={model.scene} />;
 };
+
+useGLTF.preload('/jcloud-car-viewer/model/scene.gltf');
+
+export { Car };
